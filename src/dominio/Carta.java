@@ -63,15 +63,17 @@ public abstract class Carta{
 
         switch (tipo) {
             case "Bronce":
-                return new CartaBronce(Integer.parseInt(values[1]), Integer.parseInt(values[2]), ...);
+                return new CartaBronce(Integer.parseInt(values[1]), Integer.parseInt(values[2]), Integer.parseInt(values[3]), Integer.parseInt(values[4]), Integer.parseInt(values[5]), Integer.parseInt(values[6]));
             case "Oro":
-                return new CartaOro(Integer.parseInt(values[1]), Integer.parseInt(values[2]), ...);
+                return new CartaOro(Integer.parseInt(values[1]), Integer.parseInt(values[2]), Integer.parseInt(values[3]), Integer.parseInt(values[4]), Integer.parseInt(values[5]), Integer.parseInt(values[6]));
+            case "Plata":
+                return new CartaPlata(Integer.parseInt(values[1]), Integer.parseInt(values[2]), Integer.parseInt(values[3]), Integer.parseInt(values[4]), Integer.parseInt(values[5]), Integer.parseInt(values[6]));
+            case "Ultra":
+                return new CartaUltra(Integer.parseInt(values[1]), Integer.parseInt(values[2]), Integer.parseInt(values[3]), Integer.parseInt(values[4]), Integer.parseInt(values[5]), Integer.parseInt(values[6]));
 
             default:
                 throw new IllegalArgumentException("Tipo de carta desconocido: " + tipo);
         }
     }
-
-}
 
 }

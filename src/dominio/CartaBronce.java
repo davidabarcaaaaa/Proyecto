@@ -17,11 +17,20 @@ public class CartaBronce extends Carta implements Serializable {
     public String toCSV() {
         return "Bronce," + super.toCSV();
     }
-
+    @Override
+    public String toString() {
+        return "CartaBronce{" +
+                "tiro=" + getTiro() +
+                ", pase=" + getPase() +
+                ", fisico=" + getFisico() +
+                ", velocidad=" + getVelocidad() +
+                ", defensa=" + getDefensa() +
+                ", regate=" + getRegate() +
+                '}';
+    }
     public static Carta fromCSV(String csvLine) {
         String[] values = csvLine.split(",");
         return new CartaBronce(Integer.parseInt(values[1]), Integer.parseInt(values[2]), Integer.parseInt(values[3]),
                 Integer.parseInt(values[4]), Integer.parseInt(values[5]), Integer.parseInt(values[6]));
     }
 }
-

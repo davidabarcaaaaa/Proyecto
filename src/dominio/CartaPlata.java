@@ -16,7 +16,17 @@ public class CartaPlata extends Carta implements Serializable {
     public String toCSV() {
         return "Plata," + super.toCSV();
     }
-
+    @Override
+    public String toString() {
+        return "CartaPlata{" +
+                "tiro=" + getTiro() +
+                ", pase=" + getPase() +
+                ", fisico=" + getFisico() +
+                ", velocidad=" + getVelocidad() +
+                ", defensa=" + getDefensa() +
+                ", regate=" + getRegate() +
+                '}';
+    }
     public static Carta fromCSV(String csvLine) {
         String[] values = csvLine.split(",");
         return new CartaPlata(Integer.parseInt(values[1]), Integer.parseInt(values[2]), Integer.parseInt(values[3]),
