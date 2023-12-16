@@ -53,3 +53,4 @@ public class GestorCartas {
         return new ArrayList<>(cartas);
     }
 }
+
