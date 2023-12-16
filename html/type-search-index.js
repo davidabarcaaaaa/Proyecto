@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"dominio","l":"Carta"},{"p":"dominio","l":"CartaBronce"},{"p":"dominio","l":"CartaOro"},{"p":"dominio","l":"CartaPlata"},{"p":"dominio","l":"CartaUltra"},{"p":"aplicacion","l":"GestorCartas"},{"p":"presentacion","l":"InterfazUsuario"},{"p":"aplicacion","l":"Main"},{"p":"aplicacion","l":"ManejadorCSV"}]

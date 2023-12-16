@@ -4,16 +4,23 @@ import aplicacion.GestorCartas;
 import dominio.*;
 import java.util.List;
 import java.util.Scanner;
-
+/**
+ * Clase que representa la interfaz de usuario para gestionar cartas.
+ */
 public class InterfazUsuario {
     private GestorCartas gestorCartas;
     private Scanner scanner;
-
+    /**
+     * Constructor de la clase InterfazUsuario.
+     * @param gestorCartas El gestor de cartas que se utilizará para realizar las operaciones de negocio.
+     */
     public InterfazUsuario(GestorCartas gestorCartas) {
         this.gestorCartas = gestorCartas;
         this.scanner = new Scanner(System.in);
     }
-
+    /**
+     * Muestra el menú de opciones y permite al usuario seleccionar una opción.
+     */
     public void mostrarMenu() {
         int opcion;
         do {
@@ -47,6 +54,9 @@ public class InterfazUsuario {
             }
         } while (opcion != 5);
     }
+    /**
+     * Método privado para agregar una nueva carta.
+     */
     private void agregarCarta() {
         System.out.println("Agregar nueva carta:");
         System.out.print("Tipo de carta (Bronce, Oro, Plata, Ultra): ");
@@ -92,8 +102,9 @@ public class InterfazUsuario {
         gestorCartas.agregarCarta(carta);
         System.out.println("Carta agregada exitosamente.");
     }
-
-
+    /**
+     * Método privado para eliminar una carta.
+     */
     private void eliminarCarta() {
         System.out.println("Eliminar carta:");
         List<Carta> cartas = gestorCartas.obtenerCartas();
@@ -108,11 +119,12 @@ public class InterfazUsuario {
             gestorCartas.eliminarCarta(cartas.get(indice));
             System.out.println("Carta eliminada exitosamente.");
         } else {
-            System.out.println("Índice de carta inválido.");
+            System.out.println("Indice de carta inválido.");
         }
     }
-
-
+    /**
+     * Método privado para modificar una carta.
+     */
     private void modificarCarta() {
         System.out.println("Modificar carta:");
         List<Carta> cartas = gestorCartas.obtenerCartas();
@@ -147,9 +159,12 @@ public class InterfazUsuario {
             gestorCartas.modificarCarta(indice, carta);
             System.out.println("Carta modificada exitosamente.");
         } else {
-            System.out.println("Índice de carta inválido.");
+            System.out.println("Indice de carta inválido.");
         }
     }
+    /**
+     * Método privado para mostrar las cartas.
+     */
     private void mostrarCartas() {
         List<Carta> cartas = gestorCartas.obtenerCartas();
         if (cartas.isEmpty()) {

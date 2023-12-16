@@ -1,5 +1,9 @@
 package dominio;
-
+/**
+ * La clase Carta representa una carta de fútbol.
+ * Una carta tiene atributos de tiro, pase, físico, velocidad, defensa y regate.
+ * Estos atributos se utilizan para calcular el puntaje de la carta.
+ */
 public abstract class Carta{
     private int tiro;
     private int pase;
@@ -8,6 +12,15 @@ public abstract class Carta{
     private int defensa;
     private int regate;
 
+    /**
+     * Constructor de la clase Carta.
+     * @param tiro El valor de tiro de la carta.
+     * @param pase El valor de pase de la carta.
+     * @param fisico El valor de físico de la carta.
+     * @param velocidad El valor de velocidad de la carta.
+     * @param defensa El valor de defensa de la carta.
+     * @param regate El valor de regate de la carta.
+     */
     public Carta(int tiro, int pase, int fisico, int velocidad, int defensa, int regate){
         this.tiro = tiro;
         this.pase = pase;
@@ -16,7 +29,6 @@ public abstract class Carta{
         this.defensa = defensa;
         this.regate = regate;
     }
-
     public int getTiro(){
         return tiro;
     }
@@ -53,10 +65,20 @@ public abstract class Carta{
     public void setDefensa(int defensa) {
         this.defensa = defensa;
     }
+    /**
+     * Calcula el puntaje de la carta.
+     * @return El puntaje de la carta.
+     */
     public String toCSV() {
         // Convierte el objeto Carta a una cadena en formato CSV
         return tiro + "," + pase + "," + fisico + "," + velocidad + "," + defensa + "," + regate;
     }
+
+    /**
+     * Crea una nueva carta a partir de una cadena en formato CSV.
+     * @param csvLine
+     * @return
+     */
     public static Carta fromCSV(String csvLine) {
         String[] values = csvLine.split(",");
         String tipo = values[0];
