@@ -2,9 +2,7 @@
 
 ## Descripción General
 
-Este proyecto implementa un sistema de gestión de cartas en Java. Permite a los usuarios crear, modificar, eliminar y visualizar diferentes tipos de cartas, como CartaBronce, CartaPlata y CartaOro. Las cartas se pueden guardar y cargar desde archivos CSV.
-
-Licencia: Copyright[2023] [David Abarca Herranz]Licensed under the Apache License, Version 2.0 (the "License");you may not use this file except in compliance with the License.You may obtain a copy of the License athttp://www.apache.org/licenses/LICENSE-2.0Unless required by applicable law or agreed to in writing, softwaredistributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions andlimitations under the License.
+Este proyecto implementa un sistema de gestión de cartas en Java. Permite a los usuarios crear, modificar, eliminar y visualizar diferentes tipos de cartas, como CartaBronce, CartaPlata y CartaOro. Las cartas se pueden guardar y cargar desde archivos CSV
 
 ## Para Usuarios
 
@@ -50,7 +48,8 @@ El proyecto está organizado en varios paquetes:
 
 ## Licencia
 
-(Especifica la licencia bajo la cual se distribuye el proyecto, por ejemplo, MIT, GPL, etc.)
+Licencia: Copyright[2023] [David Abarca Herranz]Licensed under the Apache License, Version 2.0 (the "License");you may not use this file except in compliance with the License.You may obtain a copy of the License athttp://www.apache.org/licenses/LICENSE-2.0Unless required by applicable law or agreed to in writing, softwaredistributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions andlimitations under the License.
+
 
 ## Autores
 
